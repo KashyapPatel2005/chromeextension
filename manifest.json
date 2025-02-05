@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Website Time Tracker & Blocker",
+    "version": "1.0",
+    "description": "Monitors time spent on websites and blocks distracting ones.",
+    "permissions": [
+      "tabs",
+      "storage",
+      "alarms",
+      "activeTab",
+      "declarativeNetRequest"
+    ],
+    "host_permissions": [
+      "*://*/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+ 
+    }
+
+  }

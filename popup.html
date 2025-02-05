@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Time Tracker & Blocker</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      width: 300px;
+      height: 400px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Section */
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    /* Blocked Sites List */
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-height: 150px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+    }
+
+    li {
+      background-color: #e9ecef;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    li:hover {
+      transform: scale(1.02);
+      background-color: #dfe6e9;
+    }
+
+    /* Input and Button */
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    input[type="text"]:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    /* Footer Section */
+    .footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6c757d;
+      margin-top: 10px;
+    }
+
+    /* Scrollbar Styling */
+    ul::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ul::-webkit-scrollbar-thumb {
+      background-color: #007bff;
+      border-radius: 10px;
+    }
+
+    ul::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h3>Time Spent: <span id="time-spent">0</span> seconds</h3>
+    <h4>Blocked Sites</h4>
+    <ul id="blocked-sites-list"></ul>
+    <input type="text" id="site-input" placeholder="Add a site to block (e.g., example.com)" />
+    <button id="block-site-btn">Block Site</button>
+  </div>
+  <div class="footer">
+    Made with ❤️ by kashyap  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
